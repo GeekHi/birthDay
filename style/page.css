@@ -5,17 +5,17 @@
 html, body{  
     height: 100%;  
 }  
-.swiper-container{  
+.flipbook{  
     height: 100%;  
 }  
 
-.swiper-container .swiper-slide{
+.flipbook .swiper-slide{
   position: relative;
   overflow: hidden;
   width: 100%
 }
 
-.swiper-container .swiper-slide .arrow{
+.flipbook .swiper-slide .arrow{
   position: absolute;
   bottom: 0.8rem;
   width: 0.8rem;
@@ -28,7 +28,7 @@ html, body{
 
 
 /* 流星*/
-.swiper-container .meteor {
+.flipbook .meteor {
     background: black;
 }
 
@@ -36,7 +36,7 @@ html, body{
   color: whitesmoke;
   font-size: 0.5rem;
   position: absolute;
-  padding-left: 1.5rem;
+  left: 1.5rem;
   top: 2rem;
 }
 
@@ -49,37 +49,25 @@ html, body{
   border-radius: 50%;
   background: url(../image/musicIcon.png) no-repeat center;
   background-size: 50% 50%;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);  
+}
+/* 自转 */
+.self-rotate{
   animation: rotate 10s linear infinite;
-}
-
-.poetry-paper1{
-  width: 100%;
-  height: 100%;
-  background: url(../image/paper1.jpg) no-repeat center;
-  background-size: cover;
-}
-
-
-.poetry-paper2{
-  width: 100%;
-  height: 100%;
-  background: url(../image/paper2.jpg) no-repeat center;
-  background-size: cover;
 }
 
 .poetry-paper3{
   width: 100%;
   height: 100%;
-  background: url(../image/paper3.jpg) no-repeat center;
+  background: url(../image/rainTow.jpg) no-repeat center;
   background-size: cover;
 }
 
 
 .poetry-gra{
-  padding-left: 1.5rem;
+  margin-left: 1.5rem;
   font-size: 0.4rem;
-  padding-top: 3rem;
+  margin-top: 1.5rem;
   line-height: 0.8rem;
   color: #1296db;
 }
@@ -94,27 +82,22 @@ html, body{
 }
 
 .poetry-gra3{
-  padding-left: 1.5rem;
+  margin-left: 1.5rem;
   font-size: 0.4rem;
-  padding-top: 1.8rem;
+  margin-top: 1.8rem;
   line-height: 0.8rem;
   color: #1296db;
-}
-.last-page{
-  width: 100%;
-  height: 100%;
-  background: url(../image/birthDay.jpg) no-repeat center;
-  background-size: cover;
 }
 
 /* 风铃 */
 
-.swiper-container .wind-chime{
+.flipbook .wind-chime{
   background: url(../image/fengling3.jpg);
   background-size: cover;
+  overflow: hidden;
 }
 
-.swiper-container .meteor .holder {
+/* .flipbook .meteor .holder {
     width: 1.5rem;
     height:4rem;
     position: absolute;
@@ -128,7 +111,7 @@ html, body{
     content: "";
   }
   
-  .swiper-container .meteor .holder .candle {
+  .flipbook .meteor .holder .candle {
     bottom: 0;
     width: 150px;
     height: 300px;
@@ -142,7 +125,7 @@ html, body{
     background: linear-gradient(#e48825, #e78e0e, #833c03, #4c1a03 50%, #1c0900);
   }
   
-  .swiper-container .meteor .holder .candle:before {
+  .flipbook .meteor .holder .candle:before {
     width: 100%;
     height: 40px;
     border-radius: 50%;
@@ -156,7 +139,7 @@ html, body{
     background: radial-gradient(#eaa121, #8e4901 45%, #b86409 80%);
   }
   
-  .swiper-container .meteor .holder  .candle:after {
+  .flipbook .meteor .holder  .candle:after {
     width: 34px;
     height: 10px;
     left: 50%;
@@ -171,7 +154,7 @@ html, body{
     background: radial-gradient(rgba(0, 0, 0, 0.6), transparent 45%);
   }
   
-  .swiper-container .meteor .holder  .thread {  
+  .flipbook .meteor .holder  .thread {  
     width: 6px;
     height: 36px;
     top: -17px;
@@ -187,7 +170,7 @@ html, body{
     background: linear-gradient(#d6994a, #4b232c, #121212, black, #e8bb31 90%);
   }
   
-  .swiper-container .meteor .holder  .flame {
+  .flipbook .meteor .holder  .flame {
     width: 24px;
     height: 120px;
     left: 50%;
@@ -204,13 +187,13 @@ html, body{
     animation: moveFlame 6s linear infinite, enlargeFlame 5s linear infinite;
   }
   
-  .swiper-container .meteor .holder  .flame:before {
+  .flipbook .meteor .holder  .flame:before {
     width: 100%;
     height: 100%;
     border-radius: 50% 50% 20% 20%;
     box-shadow: 0 0 15px 0 rgba(247, 93, 0, .4), 0 -6px 4px 0 rgba(247, 128, 0, .7);
   }
-  
+   */
   @keyframes moveFlame {
     0%, 100% {
       transform: translateX(-50%) rotate(-2deg);
@@ -229,7 +212,7 @@ html, body{
     }
   }
   
-  .swiper-container .meteor .holder  .glow {
+  .flipbook .meteor .holder  .glow {
     width: 26px;
     height: 60px;
     border-radius: 50% 50% 35% 35%;
@@ -240,7 +223,7 @@ html, body{
     box-shadow: 0 -40px 30px 0 #dc8a0c, 0 40px 50px 0 #dc8a0c, inset 3px 0 2px 0 rgba(0, 133, 255, .6), inset -3px 0 2px 0 rgba(0, 133, 255, .6);
   }
   
-  .swiper-container .meteor .holder  .glow:before {
+  .flipbook .meteor .holder  .glow:before {
     width: 70%;
     height: 60%;
     left: 50%;
@@ -250,7 +233,7 @@ html, body{
     background: rgba(0, 0, 0, 0.35);
   }
   
-  .swiper-container .meteor .holder  .blinking-glow {
+  .flipbook .meteor .holder  .blinking-glow {
     width: 1rem;
     height: 1.8rem;
     left: 50%;
@@ -306,7 +289,13 @@ html, body{
 
   }
   .photos-3D{
-    /* background: #f9cce1; */
+    background: #000;
+    overflow: hidden;
+  }
+  .picture-wall{
+    background: url(../image/wallbg1.jpg) no-repeat;
+    background-size: cover;
+    background-position: -100px -20px;
   }
   .photo-wrap .container img{
       width:100%;
@@ -399,8 +388,8 @@ html, body{
 
 .pic3
 {
-  bottom: 0; 
-  right: 0; 
+  bottom: 30px; 
+  right: 20px; 
   -webkit-transform: rotate(30deg); 
   -moz-transform: rotate(30deg); 
   transform: rotate(30deg);
@@ -426,7 +415,7 @@ html, body{
 
 .pic6
 {
-  top: 0; 
+  top: 100px; 
   left:0; 
   -webkit-transform: rotate(10deg); 
   -moz-transform: rotate(10deg); 
@@ -444,7 +433,7 @@ html, body{
 
 .pic8
 {
-  bottom: 3rem; 
+  bottom: 6rem; 
   right: 5rem; 
   -webkit-transform: rotate(5deg); 
   -moz-transform: rotate(5deg); 
@@ -486,4 +475,27 @@ html, body{
   100%{
     transform: rotate(360deg)
   }
+}
+
+
+.lightFont{
+  font-family: 'Audiowide';
+  color: #fff;
+  /* text-shadow: 0 0 5px #fff,
+  0 0 10px #fff,
+  0 0 15px #fff,
+  0 0 20px #00a67c,
+  0 0 35px #00a67c,
+  0 0 40px #00a67c,
+  0 0 50px #00a67c,
+  0 0 75px #00a67c; */
+  
+  text-shadow: 0 0 5px #fff,
+  0 0 10px #fff,
+  0 0 15px #fff,
+  0 0 20px #f98ba1,
+  0 0 35px #f98ba1,
+  0 0 40px #f98ba1,
+  0 0 50px #f98ba1,
+  0 0 75px #f98ba1;
 }
