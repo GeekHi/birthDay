@@ -15,9 +15,9 @@ function loadLook() {
       when: {
         turning: function (e, page, view) {
           // var book = $(this),
-          console.log(e);
-          console.log(page);
-          console.log(view);
+          // console.log(e);
+          // console.log(page);
+          // console.log(view);
           // currentPage = book.turn('page'),
         },
       },
@@ -59,7 +59,3 @@ document.addEventListener(
   },
   false
 );
-
-window.onload = function () {
-  $("#testview").show();
-};
