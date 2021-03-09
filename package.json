@@ -1,0 +1,36 @@
+{
+  "name": "birthday2021",
+  "version": "1.0.0",
+  "description": "a birthDay website for my girlfriend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeekHi/birthDay.git"
+  },
+  "author": "bevis nie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeekHi/birthDay/issues"
+  },
+  "homepage": "https://github.com/GeekHi/birthDay#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^7.0.1",
+    "gulp-cache": "^1.1.3",
+    "gulp-connect": "^5.7.0",
+    "gulp-filter": "^6.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rev-all": "^2.0.3",
+    "gulp-uglify": "^3.0.2",
+    "gulp-useref": "^5.0.0"
+  }
+}
