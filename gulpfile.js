@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const browserSync = require("browser-sync").create(), //自动刷新
     reload = browserSync.reload;
-const filter = require('gulp-filter');
+ const filter = require('gulp-filter');
 // gulp-filter 包， 以确保只有 *.css 文件响应 .reload - 这样一来，
 // 您还是会得到CSS注入，而不是整个页面重载。
 const useref = require('gulp-useref'); //合并JS
@@ -13,7 +13,7 @@ var gulpIf = require('gulp-if');
 var del = require('del');
 // var watch = require('gulp-watch');//监视
 
-// var minifyHtml = require("gulp-minify-html");//压缩html
+var minifyHtml = require("gulp-minify-html");//压缩html
 // var babel = require("gulp-babel");
 // var jshint = require("gulp-jshint");//js检查
 var imagemin = require('gulp-imagemin');//压缩图片文件
@@ -24,6 +24,7 @@ var RevAll = require("gulp-rev-all");//md5后缀
 
 gulp.task('html',function(){//编译html
     return gulp.src('index.html')
+    .pipe(minifyHtml())
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload());
 })

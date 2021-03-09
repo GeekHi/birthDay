@@ -52,11 +52,11 @@ $(".music-icon").one("click", function () {
 document.addEventListener(
   "WeixinJSBridgeReady",
   function () {
+    globalUI.hideLoading();
     var audi = document.getElementById("myAudio");
     audi.play();
     audi.volume = 1;
     $(".music-icon").addClass("self-rotate");
-    globalUI.hideLoading();
   },
   false
 );
