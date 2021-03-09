@@ -14,11 +14,18 @@ function loadLook() {
       //when 设置事件监听
       when: {
         turning: function (e, page, view) {
-          // var book = $(this),
-          // console.log(e);
-          // console.log(page);
-          // console.log(view);
-          // currentPage = book.turn('page'),
+          if (page == 5) {
+            clearInterval();
+            // 初始化烟花
+            $("#fireWork").fireworks({
+              sound: false, // sound effect
+              opacity: 0.9,
+              width: "100%",
+              height: "100%",
+            });
+          } else {
+            $("#fireWork").html('')
+          }
         },
       },
     });
@@ -34,14 +41,6 @@ function loadLook() {
 
 loadLook();
 
-// 初始化烟花
-$("#fireWork").fireworks({
-  sound: false, // sound effect
-  opacity: 0.9,
-  width: "100%",
-  height: "100%",
-});
-
 // 在pc端的音乐点击播放
 $(".music-icon").one("click", function () {
   var myAudio = document.getElementById("myAudio");
@@ -56,6 +55,12 @@ document.addEventListener(
     var audi = document.getElementById("myAudio");
     audi.play();
     audi.volume = 1;
+    $(".music-icon").addClass("self-rotate");
+    globalUI.hideLoading();
   },
   false
 );
+
+window.onload = function(){
+  globalUI.hideLoading();
+}
